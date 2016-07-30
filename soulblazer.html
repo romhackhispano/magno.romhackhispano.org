@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//SoftQuad//DTD HoTMetaL PRO 4.0::19970714::extensions to HTML 4.0//EN"
+ "hmpro4.dtd">
+
+<HTML>
+  <HEAD>
+    <TITLE></TITLE>
+  </HEAD>
+  
+  <BODY BACKGROUND="archivos/fondo.gif">
+    <TABLE WIDTH="100%" BORDER="BORDER">
+      <TR>
+        <TD WIDTH="193" HEIGHT="690" VALIGN="TOP"><TABLE WIDTH="206" BORDER="6">
+          <TR>
+            <TD WIDTH="186"><IMG SRC="archivos/titulo.gif" ALIGN="MIDDLE" WIDTH="175" HEIGHT="40" ALT="{short description of image}"></TD>
+          </TR>
+        </TABLE>
+        <P></P><TABLE WIDTH="206" BORDER="6" height="376" id="table1">
+          <TR>
+            <TD WIDTH="27" ALIGN="CENTER">1.</TD>
+            <TD WIDTH="237" ALIGN="CENTER" height="32"><A HREF="index.html" TARGET="">Principal</A></TD>
+          </TR>
+          <tr>
+            <TD WIDTH="27" ALIGN="CENTER">2.</TD>
+            <TD WIDTH="237" ALIGN="CENTER" height="32"><a href="cajas.html">
+			Cajas y Manuales SNES</a></TD>
+          </tr>
+          <TR>
+            <TD WIDTH="27" ALIGN="CENTER" rowspan="11">3.</TD>
+            <TD WIDTH="237" ALIGN="CENTER" height="32"><a href="proyectos.html">
+			Proyectos</a></TD>
+          </TR>
+          <TR>
+            <TD WIDTH="237" ALIGN="CENTER" height="32">
+            <p align="left"><i>* <A HREF="chrono.html" TARGET="">Chrono Trigger</A></i></TD>
+          </TR>
+          <TR>
+            <TD WIDTH="237" ALIGN="RIGHT" HEIGHT="32">
+            <p align="left"><i>* <A HREF="mana.html" TARGET="">Secret of Mana</A></i></TD>
+          </TR>
+          <TR>
+            <TD WIDTH="237" ALIGN="RIGHT" HEIGHT="32">
+            <p align="left"><i>* <a href="seiken3.html">Secret of Mana 2</a></i></TD>
+          </TR>
+          <TR>
+            <TD WIDTH="237" ALIGN="RIGHT" HEIGHT="32">
+            <p align="left"><i>* <a href="tales.html">Tales of Phantasia</a></i></TD>
+          </TR>
+          <TR>
+            <TD WIDTH="237" ALIGN="CENTER" height="12">
+            <p align="left"><i>* <a href="hunterg.html">Treasure Hunter G</a></i></TD>
+          </TR>
+          <TR>
+            <TD WIDTH="237" ALIGN="CENTER" height="32">
+            <p align="left">* <a href="rsaga3.html"><i>Romancing Saga 3</i></a></TD>
+          </TR>
+          <TR>
+            <TD WIDTH="237" ALIGN="CENTER" height="32">
+            <p align="left">* <i><a href="smrpg.html">Super Mario RPG</a></i></TD>
+          </TR>
+          <TR>
+            <TD WIDTH="237" ALIGN="CENTER" height="32">
+            <p align="left">* <i><a href="ff6.html">Final Fantasy 6</a></i></TD>
+          </TR>
+          <TR>
+            <TD WIDTH="237" ALIGN="CENTER" height="32">
+            <p align="left"><i>* <a href="soulblazer.html">SoulBlazer</a></i></TD>
+          </TR>
+          <TR>
+            <TD WIDTH="237" ALIGN="CENTER" height="32">
+            <p align="left"><i>* <a href="tsubasa_j.html">Captain Tsubasa J</a></i></TD>
+          </TR>
+          <TR>
+            <TD WIDTH="27" ALIGN="CENTER">4.</TD>
+            <TD WIDTH="237" ALIGN="CENTER" height="32">
+			<a href="docs.html">Documentación</a></TD>
+          </TR>
+          <TR>
+            <TD WIDTH="27" ALIGN="CENTER">5.</TD>
+            <TD WIDTH="237" ALIGN="CENTER" height="32">
+			<a href="utilidades.html">Utilidades</a></TD>
+          </TR>
+          <TR>
+            <TD WIDTH="27" ALIGN="CENTER">6.</TD>
+            <TD WIDTH="237" ALIGN="CENTER" height="32"><a href="enlaces.html">Enlaces</a></TD>
+          </TR>
+        </TABLE>
+        <P></P><TABLE WIDTH="206" BORDER="6">
+          <TR>
+            <TD ALIGN="CENTER" WIDTH="206"><IMG SRC="archivos/arroba.gif" ALIGN="MIDDLE" WIDTH="42" HEIGHT="42"></TD>
+          </TR>
+          <TR>
+            <TD ALIGN="CENTER" WIDTH="206"><p>
+			<a href="mailto:traducciones.magno@gmail.com">traducciones.magno@gmail.com</a><BR></TD>
+          </TR>
+        </TABLE>
+	<BR><BR><BR>
+	<BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+	</TD>
+        <TD HEIGHT="690" WIDTH="807" VALIGN="TOP"><BR><CENTER><u><b>		<font face="Times New Roman" size="+1" color="#FF0000">SOULBLAZER</font></b></u></CENTER><BR>		Este juego en realidad no es un proyecto mío íntegramente, pero sí he 		colaborado en él para la inserción de una rutina MTE para el texto, así 		como para modificar la compresión que tienen los gráficos del juego y 		poder modificar tanto la fuente como otros gráficos. El proyecto está en 		manos de <i>Hexplus</i>, aunque por ahora lo tiene parado porque su vida 		privada es lo primero; podréis estar al tanto de las noticias sobre él 		en <b><a href="http://www.nekein.com/bdd/modules/news/">Fortaleza 		Romhack</a></b>.<p>La documentación que aquí pongo a vuestra disposición 		consiste en la rutina de descompresión LZSS completamente comentada 		línea a línea por mí (en castellano, claro), la rutina de lectura de 		texto que usa el juego, así como la rutina que inserté para el MTE. La 		parte del trabajo que hice que sería útil para todo el mundo es un 		compresor/descompresor para el juego, pero éste no lo pondré al alcance 		de todos hasta que <i>Hexplus</i> termine la traducción, ya que es él el 		que tiene la prioridad sobre el proyecto. Os pongo las capturas de rigor 		para que apreciéis las diferencias; en ellas se puede ver que la fuente 		no tiene anchura variable, ya que el texto se mapea directamente en VRAM 		y hubiera necesitado una remodelación completa la ROM y lo que no se 		puede apreciar es que el texto que está bajo la espada ocupa apenas unos 		bytes, ya que está comprimido con MTE. Lo que sí se ve es el juego de 		caracteres ampliado con los símbolos en castellano.</p>		<p>&nbsp;</p>		<p align="center">		
+		<a href="archivos/SoulBlazer_Rutinas_Orig.rar">Rutinas 		originales de la versión americana</a></p>		<p align="center">		
+		<a href="archivos/SoulBlazer_Rutinas_Mod.rar">Rutinas 		modificadas para la versión en castellano</a></p>		<p><BR><BR></p>
+		<TABLE WIDTH="807">
+          <TR>
+            <TD ALIGN="CENTER" WIDTH="400">
+			<img border="0" src="archivos/SoulBlazer_logo_ing.png" width="325" height="281"><p>			<img border="0" src="archivos/SoulBlazer_texto_ing.png" width="325" height="282"></TD>
+            <TD ALIGN="CENTER" VALIGN="MIDDLE">			<img border="0" src="archivos/SoulBlazer_logo_esp.png" width="325" height="284"><p>			<img border="0" src="archivos/SoulBlazer_texto_esp.png" width="325" height="284"></TD>
+          </TR>
+        </TABLE>
+        <P></P>
+        <P></P>
+        &nbsp;<p>
+<BR><BR>
+</TD></TR>
+    </TABLE>
+    
+    <P ALIGN="LEFT"></P>
+    
+    <P></P>
+  </BODY>
+</HTML>
