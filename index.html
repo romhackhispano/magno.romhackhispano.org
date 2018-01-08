@@ -61,6 +61,92 @@
 	</TD>
           <TD HEIGHT="241" WIDTH="1420" VALIGN="TOP"><CENTER LANG="es"><FONT SIZE="+2"><B><I><U><FONT COLOR="#008000">PRINCIPAL</FONT></U></I></B></FONT><HR>
           </CENTER>
+            <p><font size="4" color="#800080"><b><i>08/01/2018:&nbsp;&iexcl;&iexcl;FELIZ A&Ntilde;O 2018!!</i></b></font></p>
+            <p>La primera actualizaci&oacute;n del a&ntilde;o quiero que sea para felicitaros a todos este nuevo a&ntilde;o que entra y deseraros que est&eacute; lleno de felicidad y momentos inolvidables... y tambi&eacute;n algo de juegos retros, que siempre est&aacute; bien :D</p>
+            <p>Llevo varios meses sin actualizar porque he tenido problemas con la copia local de la p&aacute;gina que no me dejaba actualizarla en GitHub; adem&aacute;s he estado muy liado con mi vida personal que va a dar un vuelco espectacula en unos meses. Pero mientras tanto, y hasta que llegue ese momento, he ido avanzando con muchas cosas del <strong>Star Ocean</strong>. La primera y m&aacute;s interesante es que he conseguido extraer todos los bloques comprimidos tanto de eventos, texto y mapas (comprimidos con LZ) como gr&aacute;ficos con S-DD1 y bloques de audio SPC. Esto me ha permitido re-insertar todo en una ROM de 65.5Megabits en vez de los 96 Megabits que ten&iacute;a la versi&oacute;n anterior sobre la que trabajaba. Lo malo de esto es que yo pensaba llegar a compactarlo todo en 64 Megabits, para que m&aacute;s emuladores soportaran la ROM y fuera m&aacute;s f&aacute;cil meter el juego en una de mis PCBs.</p>
+            <p>Pero a&uacute;n as&iacute;, el objetivo de extraer por completo un juego (incluido c&oacute;digo fuente) est&aacute; m&aacute;s cerca ahora y encima, por el camino, he ido aprendiendo m&aacute;s cosas y mejorando aspectos del juego; aqu&iacute; os pongo unas capturas de las cosas corregidas:</p>
+            <p>&nbsp;</p>
+            <p> * Famoso bug que ocurre en el <em>Laboratorio del Espacio y del Tiempo</em>; resulta que el juego no tiene en cuenta la altura a la que se encuentra el personaje sobre el suelo, de modo que al andar por encima de un puente y pasar por encima de un cofre, te topas contra &eacute;l y tienes que esquivarlo como si fuera un objeto que est&aacute; sobre el puente. Adem&aacute;s, puedes abrirlo desde el puente sin necesidad de bajar a la altura del suelo, lo que hace el bug m&aacute;s raro todav&iacute;a. La soluci&oacute;n en la versi&oacute;n espa&ntilde;ola implica cambiar la gesti&oacute;n interna del juego de las tiles que rodean al personaje y tener en cuenta que el cofre est&eacute; a la misma altura para poder abrirlo, y para eso uso la prioridad de los sprites; me hubiera gustado usar una variable extra que indicara que el personaje est&aacute; a otro nivel, pero eso implica muchos cambios en el juego y m&aacute;s posibilidades de errores.</p>
+            <table width="200" border="0">
+              <tr>
+                <td colspan="2"><div align="center"><strong><em><u>VERSI&Oacute;N DEJAP</u></em></strong></div></td>
+              </tr>
+              <tr>
+                <td><img src="Capturas/SO/SO_eng_chest_0.gif" width="256" height="224"></td>
+                <td><img src="Capturas/SO/SO_eng_chest_1.gif" width="256" height="224"></td>
+              </tr>
+              <tr>
+                <td colspan="2"><div align="center"><strong><em><u>VERSI&Oacute;N ESPA&Ntilde;OLA</u></em></strong></div></td>
+              </tr>
+              <tr>
+                <td><img src="Capturas/SO/SO_esp_chest_0.gif" width="256" height="224"></td>
+                <td><img src="Capturas/SO/SO_esp_chest_1.gif" width="256" height="224"></td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+            <p> * Cuando pulsas el bot&oacute;n 'A' para confirmar el mensaje de que has subido   de nivel o aprendido una nueva habilidad, &eacute;ste no desaparece hasta que mueves   el cursor porque en la versi&oacute;n japonesa no se refresca correctamente la ventana inferior. Ahora en la espa&ntilde;ola est&aacute; corregido.</p>
+            <table width="364" border="0">
+                <tr>
+                  <td width="156"><div align="center"><strong><em><u>VERSI&Oacute;N DEJAP</u></em></strong></div></td>
+                  <td width="124"><div align="center"><em><strong><u>VERSI&Oacute;N ESPA&Ntilde;OLA</u></strong></em></div></td>
+              </tr>
+                <tr>
+                  <td><img src="Capturas/SO/SO_eng_skill_bug.gif" width="256" height="224"></td>
+                  <td><img src="Capturas/SO/SO_esp_skill_fixed.gif" width="256" height="224"></td>
+                </tr>
+            </table>
+            <p>&nbsp;</p>
+            <p>* En Van I-Il los programadores no hab&iacute;an incluido la capa de agua en la versi&oacute;n final japonesa, pero ya la he includo yo... &iexcl;vaya despistados!</p>
+            <table width="200" border="0">
+              <tr>
+                <td colspan="2"><div align="center"><em><strong><u>VERSI&Oacute;N ESPA&Ntilde;OLA</u></strong></em></div></td>
+              </tr>
+              <tr>
+                <td><img src="Capturas/SO/StarOcean_esp_Van_Water_0.png" width="256" height="224"></td>
+                <td><img src="Capturas/SO/StarOcean_esp_Van_Water_1.png" width="256" height="224"></td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+            <p>* Los personajes que est&aacute;n fijos sin moverse en el escenario no se reflejan en el agua; se puede ver en la foto anterior. Pero en la versi&oacute;n espa&ntilde;ola se crea el sprite &quot;mirroreado&quot; en la posici&oacute;n correcta para que se vea el reflejo en el agua:            </p>
+            <table width="200" border="0">
+              <tr>
+                <td colspan="2"><div align="center"><em><strong><u>VERSI&Oacute;N ESPA&Ntilde;OLA</u></strong></em></div></td>
+              </tr>
+              <tr>
+                <td><img src="Capturas/SO/StarOcean_esp_Van_Water_2.png" width="229" height="200"></td>
+                <td><img src="Capturas/SO/SO_esp_reflection_fixed.png" width="256" height="224"></td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+            <p>* Se ha corregido el mapa de algunos escenarios que conten&iacute;an tiles incorrectas, como por ejemplo en el escenario de <em>Dulce</em>, en el que te puedes meter entre las rocas de las paredes, o las escaleras de algunas zonas:</p>
+            <table width="200" border="0">
+              <tr>
+                <td><div align="center"><strong><em><u>VERSI&Oacute;N DEJAP</u></em></strong></div></td>
+                <td><div align="center"><em><strong><u>VERSI&Oacute;N ESPA&Ntilde;OLA</u></strong></em></div></td>
+              </tr>
+              <tr>
+                <td><img src="Capturas/SO/SO_eng_stairs_bug.gif" width="256" height="224"></td>
+                <td><img src="Capturas/SO/SO_esp_stairs_fixed.gif" width="256" height="224"></td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+            <p>* La cantidad de dinero o experiencia obtenida en un combate son n&uacute;mero positivos siempre (por tanto sin signo), pero la versi&oacute;n japonesa los trataba como n&uacute;mero con signo, por lo que al obtener una experiencia mayor de 32767, el n&uacute;mero &quot;overwrappeaba&quot; y cambiaba de valor. Esto es un fallo gordo que ya se ha corregido:</p>
+            <table width="200" border="0">
+              <tr>
+                <td><div align="center"><strong><em><u>VERSI&Oacute;N DEJAP</u></em></strong></div></td>
+                <td><div align="center"><em><strong><u>VERSI&Oacute;N ESPA&Ntilde;OLA</u></strong></em></div></td>
+              </tr>
+              <tr>
+                <td><img src="Capturas/SO/SO_jap_Fol_bug.gif" width="256" height="224"></td>
+                <td><img src="Capturas/SO/SO_esp_Fol_fixed.gif" width="256" height="224"></td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+            <p>* Faltaba un gr&aacute;fico de expresi&oacute;n por traducir desde el japon&eacute;s, pero ya est&aacute; hecho tambi&eacute;n:</p>
+            <p><img src="Capturas/SO/SO_esp_Iria_Plof.gif" width="256" height="224"></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
             <p><font size="4" color="#800080"><b><i>14/06/2017:&nbsp;&iexcl;STAR OCEAN TERMINADO!</i></b></font></p>
             <p>Una gran noticia, s&iacute; se&ntilde;or :D &iexcl;Ya consegu&iacute; pasarme el juego al completo sin encontrar ning&uacute;n cuelgue ni efecto raro ocasionados por la reprogramaci&oacute;n que met&iacute;! Es un &eacute;xito porque hay muchas cosas de dentro del sistema del juego que modifiqu&eacute; para la traducci&oacute;n al castellano y parece que todo funciona sin problemas. Aqu&iacute; pod&eacute;is ver un video (sin spoilers) de los cr&eacute;ditos del final:</p>
             <p><a href="https://youtu.be/CbKnzyZe42g">Créditos del final</a></p>
