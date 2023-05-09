@@ -75,7 +75,7 @@
           <TR>
             <TD WIDTH="27" ALIGN="CENTER">4.</TD>
             <TD WIDTH="237" ALIGN="CENTER" height="32">
-			<a href="docs.html">Documentaci�n</a></TD>
+			<a href="docs.html">Documentación</a></TD>
           </TR>
           <TR>
             <TD WIDTH="27" ALIGN="CENTER">5.</TD>
@@ -105,16 +105,16 @@
         <P ALIGN="CENTER">
 		<FONT FACE="Times New Roman" SIZE="+1" COLOR="#FF0000"><B><U>
         STAR OCEAN al 100%</U></B></FONT>		</P>
-        <p>&iexcl;&iexcl;Por fin tenemos aqu&iacute; la versi&oacute;n de 48 megas del juego!! Tras un par de a&ntilde;os de desarollo de la traducci&oacute;n, he conseguido por fin insertar todos los gr&aacute;ficos traducidos, para lo cual he tenido que mover todos los bloques de datos que forman la ROM para hacer hueco a los nuevos gr&aacute;ficos traducidos. Esto ha sido un reto bastante interesante porque ha supuesto mover m&aacute;s de 35000 bloques de datos con compresiones varias (LZ, Huffman, S-DD1 y datos sin comprimir de audio SPC. Cuando hace 2 a&ntilde;os empec&eacute; el proyecto, la idea era comprobar por qu&eacute; era tan dif&iacute;cil hacer la traducci&oacute;n como la gente dec&iacute;a y aprender un poco m&aacute;s acerca del chip S-DD1. La idea no era sacar un parche porque desde el principio asum&iacute; que si Dejap no hab&iacute;a podido insertar los gr&aacute;ficos traducidos al ingl&eacute;s por falta de espacio, lo mismo me iba a pasar a m&iacute;. As&iacute; que desde el principio la intenci&oacute;n era ir insertando lo que iba cambiando en una ROM expandida que pod&iacute;a ejecutar en el emulador Super Sleuth (gracias a nevksti por ella) e ir probando. Esto dej&eacute; de hacerlo muy pronto porque los cambios que insert&eacute; eran ENORMES y el proceso de inserci&oacute;n en SuperSleuth era tedioso, as&iacute; que cambi&eacute; de t&aacute;ctica: los cambios de c&oacute;digo los iba metiendo en la ROM japonesa de 48 megas para ir probando en emulador, pero los cambios en los gr&aacute;ficos los ten&iacute;a que hacer en una versi&oacute;n especial que sobreescrib&iacute;a datos de audio, ya que era la &uacute;nica manera de no buscar espacio libre en ROM para insertarlos y poder probarlos.</p>
-        <p>As&iacute; que durante el desarrollo ten&iacute;a una ROM con los cambios de c&oacute;digo y otra con los cambios gr&aacute;ficos, pero nunca una con las dos cosas a la vez, por lo que decid&iacute; hacer mi propia versi&oacute;n expandida que no usaba la t&aacute;ctica de Neviksti: yo directamente fui cambiando m&aacute;s de 100 rutinas donde se hac&iacute;an descompresiones de gr&aacute;ficos y las fui sustituyendo por DMAs normales desde zonas expandidas de ROM. Pens&eacute; que as&iacute; conseguir&iacute;a una ROM de unos 64 megas que podr&iacute;a ser ejecutada en emuladores convencionales, y as&iacute; me evitaba lo de reordenar 35000 bloques de datos. Pero los c&aacute;lculos fallaron por 1.5 Megabits, y la ROM final expandida ocupaba 65.5Mbits, que s&iacute; funcionan perfectamente en un cartucho real. Ese cartucho real tiene un mapa de memoria especial que implement&eacute; en mis placas que no es compatible con otros mapas de memoria de otros cartuchos (ni SD2SNES ni otros flashcarts).</p>
-        <p>Y as&iacute;, despu&eacute;s de mucho esfuerzo, he conseguido reubicar correctamente los 35000 bloques y, afortunadamente, ha habido espacio en la ROM de 48 megas para que quepan todos los gr&aacute;ficos en castellano y los subt&iacute;tulos de la intro, que estos ocupan bastante espacio.</p>
+        <p>¡¡Por fin tenemos aquí la versión de 48 megas del juego!! Tras un par de años de desarollo de la traducción, he conseguido por fin insertar todos los gráficos traducidos, para lo cual he tenido que mover todos los bloques de datos que forman la ROM para hacer hueco a los nuevos gráficos traducidos. Esto ha sido un reto bastante interesante porque ha supuesto mover más de 35000 bloques de datos con compresiones varias (LZ, Huffman, S-DD1 y datos sin comprimir de audio SPC. Cuando hace 2 años empecé el proyecto, la idea era comprobar por qué era tan difícil hacer la traducción como la gente decía y aprender un poco más acerca del chip S-DD1. La idea no era sacar un parche porque desde el principio asumí que si Dejap no había podido insertar los gráficos traducidos al inglés por falta de espacio, lo mismo me iba a pasar a mí. Así que desde el principio la intención era ir insertando lo que iba cambiando en una ROM expandida que podía ejecutar en el emulador Super Sleuth (gracias a nevksti por ella) e ir probando. Esto dejé de hacerlo muy pronto porque los cambios que inserté eran ENORMES y el proceso de inserción en SuperSleuth era tedioso, así que cambié de táctica: los cambios de código los iba metiendo en la ROM japonesa de 48 megas para ir probando en emulador, pero los cambios en los gráficos los tenía que hacer en una versión especial que sobreescribía datos de audio, ya que era la única manera de no buscar espacio libre en ROM para insertarlos y poder probarlos.</p>
+        <p>Así que durante el desarrollo tenía una ROM con los cambios de código y otra con los cambios gráficos, pero nunca una con las dos cosas a la vez, por lo que decidí hacer mi propia versión expandida que no usaba la táctica de Neviksti: yo directamente fui cambiando más de 100 rutinas donde se hacían descompresiones de gráficos y las fui sustituyendo por DMAs normales desde zonas expandidas de ROM. Pensé que así conseguiría una ROM de unos 64 megas que podría ser ejecutada en emuladores convencionales, y así me evitaba lo de reordenar 35000 bloques de datos. Pero los cálculos fallaron por 1.5 Megabits, y la ROM final expandida ocupaba 65.5Mbits, que sí funcionan perfectamente en un cartucho real. Ese cartucho real tiene un mapa de memoria especial que implementé en mis placas que no es compatible con otros mapas de memoria de otros cartuchos (ni SD2SNES ni otros flashcarts).</p>
+        <p>Y así, después de mucho esfuerzo, he conseguido reubicar correctamente los 35000 bloques y, afortunadamente, ha habido espacio en la ROM de 48 megas para que quepan todos los gráficos en castellano y los subtítulos de la intro, que estos ocupan bastante espacio.</p>
 		<p><BR></p>
-      <p><font color="#FF0000" size="5"><span style="background-color: #00FF00">Y por &uacute;ltimo una aclaraci&oacute;n muy 		importante.</span></font></p>
-        <p>Este parche s&oacute;lo se puede aplicar a la ROM japonesa, que es en la que me he basado para hacer la traducci&oacute;n. La ROM con la traducci&oacute;n al ingl&eacute;s de Dejap no sirve. Y esta versi&oacute;n tampoco funciona en el hardware real, hasta donde yo s&eacute;.<u><strong></strong></u> No lo he probado as&iacute; que no puedo asegurarlo al 100%, aunque tampoco est&aacute; pensada para ello, sino para que se disfrute en un emulador. Si alguien quiere tener un cartucho con la traducci&oacute;n, que se ponga en contacto conmigo ya que tengo preparada una versi&oacute;n de 65.5Megabits que no necesita del chip especial S-DD1 que lleva la versi&oacute;n japonesa y con esa versi&oacute;n s&iacute; se puede jugar en el hardware real.</p>
+      <p><font color="#FF0000" size="5"><span style="background-color: #00FF00">Y por último una aclaración muy 		importante.</span></font></p>
+        <p>Este parche sólo se puede aplicar a la ROM japonesa, que es en la que me he basado para hacer la traducción. La ROM con la traducción al inglés de Dejap no sirve. Y esta versión tampoco funciona en el hardware real, hasta donde yo sé.<u><strong></strong></u> No lo he probado así que no puedo asegurarlo al 100%, aunque tampoco está pensada para ello, sino para que se disfrute en un emulador. Si alguien quiere tener un cartucho con la traducción, que se ponga en contacto conmigo ya que tengo preparada una versión de 65.5Megabits que no necesita del chip especial S-DD1 que lleva la versión japonesa y con esa versión sí se puede jugar en el hardware real.</p>
         <p align="center">&nbsp;</p>
         <p align="center">&nbsp;</p>
-      <p><i><b><font size="4" color="#0000FF">Versi&oacute;n 100%:</font></b></i></p>
-        <p>La versi&oacute;n de 48 megas no ha sido intensivamente probada, pero la versi&oacute;n expandida de 65.5Mbits s&iacute;, por lo que por l&oacute;gica, la de 48 megas deber&iacute;a de funcionar. Sin embargo, a lo mejor alg&uacute;n bloque de datos se ha insertado mal y pudiera generar alg&uacute;n cuelgue. Al no presentarse nadie voluntario para hacer el betatesting hace unos meses, la versi&oacute;n no est&aacute; probada como a m&iacute; me gustar&iacute;a, pero deber&iacute;a funcionar.</p>
+      <p><i><b><font size="4" color="#0000FF">Versión 100%:</font></b></i></p>
+        <p>La versión de 48 megas no ha sido intensivamente probada, pero la versión expandida de 65.5Mbits sí, por lo que por lógica, la de 48 megas debería de funcionar. Sin embargo, a lo mejor algún bloque de datos se ha insertado mal y pudiera generar algún cuelgue. Al no presentarse nadie voluntario para hacer el betatesting hace unos meses, la versión no está probada como a mí me gustaría, pero debería funcionar.</p>
         <p><BR>
         </p>
         <TABLE WIDTH="807">
@@ -128,21 +128,21 @@
               <BR>
               <B>Porcentaje
                 Completado:</B> 100% <BR><BR>
-              <B>Tama&ntilde;o Parche: </B>5 Megabytes</p>
+              <B>Tamaño Parche: </B>5 Megabytes</p>
               <p><b>Fecha Parche:</b> 04/08/2018<BR><BR>
                 <B>Parche JP:</B> 
             <a href="archivos/SO_esp.rar">Star Ocean en castellano</a></p></TD>
           </TR>
         </TABLE><BR>
-        <P></P><B><I>Lo que ya est&aacute; hecho:</I></B>
+        <P></P><B><I>Lo que ya está hecho:</I></B>
         <UL>
           <LI>Insertada la rutina para la fuente VWF.</LI>
-          <LI>Nuevo algoritmo de compresi&oacute;n LZH que mejora el de Dejap</LI>
-			<LI>Traducidos los subt&iacute;tulos de la intro</LI>
-			<LI>Todos los carteles gr&aacute;ficos del juego est&aacute;n en castellano</LI>
+          <LI>Nuevo algoritmo de compresión LZH que mejora el de Dejap</LI>
+			<LI>Traducidos los subtítulos de la intro</LI>
+			<LI>Todos los carteles gráficos del juego están en castellano</LI>
         </UL>
         <BR><B><I>Lo que queda por hacer:</I></B><UL>
-			<LI>Quiz&aacute; corregir alg&uacute;n di&aacute;logo o reubicar alg&uacute;n bloque de datos que no est&eacute; bien insertado. Pero eso lo dejaremos para la versi&oacute;n 100.1% ;)</LI>
+			<LI>Quizá corregir algún diálogo o reubicar algún bloque de datos que no esté bien insertado. Pero eso lo dejaremos para la versión 100.1% ;)</LI>
         </UL>
 </TD></TR>
       </TABLE>
